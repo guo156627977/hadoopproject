@@ -37,22 +37,22 @@ public class App {
 
     public static void main(String[] args) throws IOException {
 
-        String a = "1";
-        //if (args == null || args.length == 0 ) {
-        //    System.out.println("no args");
-        //    System.exit(-1);
-        //}
+        //String a = "1";
+        if (args == null || args.length == 0 ) {
+            System.out.println("no args");
+            System.exit(-1);
+        }
 
         while (true) {
-            //gencalllog(args[0]);
-            gencalllog(a);
+            gencalllog(args[0]);
+            //gencalllog(a);
         }
 
     }
 
     private static void gencalllog(String string) throws IOException {
-        FileWriter fileWriter = new FileWriter("D:\\calllog.txt", true);
-        //FileWriter fileWriter = new FileWriter(string, true);
+        //FileWriter fileWriter = new FileWriter("D:\\calllog.txt", true);
+        FileWriter fileWriter = new FileWriter(string, true);
         //取主叫
         String caller = phoneNumbers.get(random.nextInt(phoneNumbers.size()));
         String callerName = callers.get(caller);
@@ -73,7 +73,7 @@ public class App {
 
         fileWriter.write(log);
         fileWriter.flush();
-        System.out.print("log = " + log);
+        //System.out.print("log = " + log);
     }
 
     public static String randomDateBetweenMinAndMax() {
