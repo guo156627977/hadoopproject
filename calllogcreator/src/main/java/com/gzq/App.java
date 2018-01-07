@@ -7,6 +7,7 @@ import java.util.*;
 
 /**
  * Hello world!
+ * @author guozhiqiang
  */
 public class App {
 
@@ -86,13 +87,11 @@ public class App {
         calendar.set(Calendar.MINUTE, 0);
         calendar.set(Calendar.SECOND, 0);
         long min = calendar.getTime().getTime();
-        //System.out.println("min = " + min);
         calendar.set(2018, 0, 1);
         calendar.set(Calendar.HOUR_OF_DAY, 0);
         calendar.set(Calendar.MINUTE, 0);
         calendar.set(Calendar.SECOND, 0);
         long max = calendar.getTime().getTime();
-        //System.out.println("max = " + max);
         //得到大于等于min小于max的double值
         double randomDate = Math.random() * (max - min) + min;
         //将double值舍入为整数，转化成long类型
